@@ -63,14 +63,14 @@ Added task: "the thing i need to do" with priority 5
 Use the del command to remove an item by its priority.
 
 ```
-$ ./tasks del 3
+$ ./tasks delete 3
 Deleted item with priority 3
 ```
 
 Attempting to delete a non-existent item should display an error message.
 
 ```
-$ ./tasks del 5
+$ ./tasks delete 5
 Error: item with priority 5 does not exist. Nothing deleted.
 ```
 
