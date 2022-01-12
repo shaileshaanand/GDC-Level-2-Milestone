@@ -23,8 +23,8 @@ $ python tasks.py help
 Usage :-
 $ python tasks.py add 2 hello world    # Add a new item with priority 2 and text "hello world" to the list
 $ python tasks.py ls                   # Show incomplete priority list items sorted by priority in ascending order
-$ python tasks.py del INDEX            # Delete the incomplete item with the given index
-$ python tasks.py done INDEX           # Mark the incomplete item with the given index as complete
+$ python tasks.py del PRIORITY_NUMBER  # Delete the incomplete item with the given priority
+$ python tasks.py done PRIORITY_NUMBER # Mark the incomplete item with the given priority as complete
 $ python tasks.py help                 # Show usage
 $ python tasks.py report               # Statistics
 ```
@@ -60,23 +60,23 @@ Added task: "the thing i need to do" with priority 5
 
 ### 4. Delete an item
 
-Use the del command to remove an item by its index.
+Use the del command to remove an item by its priority.
 
 ```
-$ ./tasks del 3
-Deleted item with index 3
+$ ./tasks delete 3
+Deleted item with priority 3
 ```
 
 Attempting to delete a non-existent item should display an error message.
 
 ```
-$ ./tasks del 5
-Error: item with index 5 does not exist. Nothing deleted.
+$ ./tasks delete 5
+Error: item with priority 5 does not exist. Nothing deleted.
 ```
 
 ### 5. Mark a task as completed
 
-Use the done command to mark an item as completed by its index.
+Use the done command to mark an item as completed by its priority.
 
 ```
 $ ./tasks done 1
@@ -87,7 +87,7 @@ Attempting to mark a non-existed item as completed will display an error message
 
 ```
 $ ./tasks done 5
-Error: no incomplete item with index 5 exists.
+Error: no incomplete item with priority 5 exists.
 ```
 
 ### 6. Generate a report
